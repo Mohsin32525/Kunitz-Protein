@@ -1,0 +1,138 @@
+BEST THRESHOLD OBTAINED FROM SET_1 FULL SEQUENCE: 0.0001
+
+PERFORMANCES SET_2 USING E-VALUE THRESHOLD OF SET_1 - FULL SEQUENCES
+USING E-VALUE OF THE FULL SEQUENCE
+tn= 286280 fn= 2
+fp= 6 tp= 182
+threshold= 0.0001 q2= 0.999972073864628 MCC= 0.9785372976838954 tpr= 0.9680851063829787 ppv= 0.9891304347826086 fullseq= True
+False positives for set 2 considering full sequence set 1 e-value threshold:
+UniprotId|True Class|E-value
+Q09JW3 0 9.3e-05
+C5H8E7 0 9.3e-05
+P83605 0 5.1e-05
+P0DJ63 0 3.4e-05
+P56409 0 9.2e-06
+P84555 0 1.6e-06
+False negatives for set 2 considering full sequence set 1 e-value threshold:
+UniprotId|True Class|E-value
+O62247 1 0.00047
+A0A1Q1NL17 1 0.00043
+
+OVERALL PERFORMANCES USING E-VALUE THRESHOLD OF SET_1 - FULL SEQUENCES
+USING E-VALUE OF THE FULL SEQUENCE
+tn= 572564 fn= 3
+fp= 8 tp= 365
+threshold= 0.0001 q2= 0.9999808007819317 MCC= 0.9851680472449778 tpr= 0.9785522788203753 ppv= 0.9918478260869565 fullseq= True
+False positives for overall considering full sequence set 1 e-value threshold:
+UniprotId|True Class|E-value
+Q09JW3 0 9.3e-05
+C5H8E7 0 9.3e-05
+P83605 0 5.1e-05
+P85039 0 4.1e-05
+P0DJ63 0 3.4e-05
+P56409 0 9.2e-06
+P84555 0 1.6e-06
+Q8MVC4 0 7.7e-17
+False negatives for overall considering full sequence set 1 e-value threshold:
+UniprotId|True Class|E-value
+D3GGZ8 1 0.011
+O62247 1 0.00047
+A0A1Q1NL17 1 0.00043
+
+
+
+BEST THRESHOLD OBTAINED FROM SET_2 FULL SEQUENCE: 1e-06
+
+PERFORMANCES SET_1 USING E-VALUE THRESHOLD OF SET_2 - FULL SEQUENCES
+USING E-VALUE OF THE FULL SEQUENCE
+tn= 286285 fn= 2
+fp= 1 tp= 182
+threshold= 1e-06 q2= 0.9999895276992355 MCC= 0.9918240602441114 tpr= 0.994535519125683 ppv= 0.9891304347826086 fullseq= True
+False positives for set 1 considering full sequence set 2 e-value threshold:
+UniprotId|True Class|E-value
+Q8MVC4 0 7.7e-17
+False negatives for set 1 considering full sequence set 2 e-value threshold:
+UniprotId|True Class|E-value
+D3GGZ8 1 0.011
+Q8WPG5 1 1.5e-05
+
+OVERALL PERFORMANCES USING E-VALUE THRESHOLD OF SET_2 - FULL SEQUENCES
+USING E-VALUE OF THE FULL SEQUENCE
+tn= 572571 fn= 4
+fp= 1 tp= 364
+threshold= 1e-06 q2= 0.9999912730826963 MCC= 0.9931826803907183 tpr= 0.9972602739726028 ppv= 0.9891304347826086 fullseq= True
+False positives for overall considering full sequence set 2 e-value threshold:
+UniprotId|True Class|E-value
+Q8MVC4 0 7.7e-17
+False negatives for overall considering full sequence set 2 e-value threshold:
+UniprotId|True Class|E-value
+D3GGZ8 1 0.011
+O62247 1 0.00047
+A0A1Q1NL17 1 0.00043
+Q8WPG5 1 1.5e-05
+
+
+
+ BEST THRESHOLD OBTAINED FROM SET_1 SINGLE DOMAIN: 1e-05
+
+PERFORMANCES SET_2 USING E-VALUE THRESHOLD OF SET_1 - SINGLE DOMAIN
+USING E-VALUE OF THE BEST DOMAIN
+tn= 286285 fn= 2
+fp= 1 tp= 182
+threshold= 1e-05 q2= 0.9999895276992355 MCC= 0.9918240602441114 tpr= 0.994535519125683 ppv= 0.9891304347826086 fullseq= False
+False positives for set 2 considering single domain set 1 e-value threshold:
+UniprotId|True Class|E-value
+P84555 0 1.6e-06
+False negatives for set 2 considering single domain set 1 e-value threshold:
+UniprotId|True Class|E-value
+O62247 1 0.0014
+A0A1Q1NL17 1 0.0012
+
+OVERALL PERFORMANCES USING E-VALUE THRESHOLD OF SET_1 - SINGLE DOMAIN
+USING E-VALUE OF THE BEST DOMAIN
+tn= 572570 fn= 4
+fp= 2 tp= 364
+threshold= 1e-05 q2= 0.9999895276992355 MCC= 0.9918240602441114 tpr= 0.994535519125683 ppv= 0.9891304347826086 fullseq= False
+False positives for overall considering single domain set 1 e-value threshold:
+UniprotId|True Class|E-value
+P84555 0 1.6e-06
+Q8MVC4 0 5.8e-07
+False negatives for overall considering single domain set 1 e-value threshold:
+UniprotId|True Class|E-value
+D3GGZ8 1 0.011
+O62247 1 0.0014
+A0A1Q1NL17 1 0.0012
+Q8WPG5 1 0.00013
+
+
+
+ BEST THRESHOLD OBTAINED FROM SET_2 SINGLE DOMAIN: 1e-05
+
+PERFORMANCES SET_1 USING E-VALUE THRESHOLD OF SET_2 - SINGLE DOMAIN
+USING E-VALUE OF THE BEST DOMAIN
+tn= 286285 fn= 2
+fp= 1 tp= 182
+threshold= 1e-05 q2= 0.9999895276992355 MCC= 0.9918240602441114 tpr= 0.994535519125683 ppv= 0.9891304347826086 fullseq= False
+False positives for set 1 considering single domain set 2 e-value threshold:
+UniprotId|True Class|E-value
+Q8MVC4 0 5.8e-07
+False negatives for set 1 considering single domain set 2 e-value threshold:
+UniprotId|True Class|E-value
+D3GGZ8 1 0.011
+Q8WPG5 1 0.00013
+
+OVERALL PERFORMANCES USING E-VALUE THRESHOLD OF SET_2 - SINGLE DOMAIN
+USING E-VALUE OF THE BEST DOMAIN
+tn= 572570 fn= 4
+fp= 2 tp= 364
+threshold= 1e-05 q2= 0.9999895276992355 MCC= 0.9918240602441114 tpr= 0.994535519125683 ppv= 0.9891304347826086 fullseq= False
+False positives for overall considering single domain set 2 e-value threshold:
+UniprotId|True Class|E-value
+P84555 0 1.6e-06
+Q8MVC4 0 5.8e-07
+False negatives for overall considering single domain set 2 e-value threshold:
+UniprotId|True Class|E-value
+D3GGZ8 1 0.011
+O62247 1 0.0014
+A0A1Q1NL17 1 0.0012
+Q8WPG5 1 0.00013
