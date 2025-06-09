@@ -50,6 +50,7 @@ Data collection resolution
 This will output a .CSV file. Then execute the following bash script:
 ```bash
 bash script_recover_representative_kunitz.sh
+```
 ## This script:
 
 Extracts PF00014 sequences from PDB
@@ -60,6 +61,5 @@ Extracts representative sequences
 
 Generates tmp_pdb_efold_ids.txt in PDB:CHAIN format
 
-🔎 Before proceeding: Manually inspect tmp_pdb_efold_ids.txt and remove sequences that are too long.
-
+Before proceeding: Manually inspect tmp_pdb_efold_ids.txt and remove sequences that are too long.
 
