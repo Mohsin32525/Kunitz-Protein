@@ -63,26 +63,23 @@ Generates tmp_pdb_efold_ids.txt in PDB:CHAIN format
 
 Before proceeding: Manually inspect tmp_pdb_efold_ids.txt and remove sequences that are too long.
 
-
-1. Download Swiss-Prot Dataset
+## Download Swiss-Prot Dataset
 Go to UniProt and download the full Swiss-Prot FASTA file:
 uniprot_sprot.fasta
 
-
- Download All Kunitz Proteins
+Download All Kunitz Proteins
 From UniProt, search and download all Kunitz domain proteins:
 all_kunitz.fasta
 
-3. Structural Alignment
+Structural Alignment
 Use PDBeFold with tmp_pdb_efold_ids.txt
 Output: pdb_kunitz_rp.ali
 
-4. Build Structural HMM
-bash
-Copy
-Edit
+Build Structural HMM
+```bash
 bash create_hmm_str.sh
 bash create_testing_sets.sh
+```
 Builds structural HMM from PDBeFold alignment
 
 Removes training sequences from test set
