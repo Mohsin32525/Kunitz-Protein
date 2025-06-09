@@ -75,6 +75,18 @@ Structural Alignment
 Use PDBeFold with tmp_pdb_efold_ids.txt
 Output: pdb_kunitz_rp.ali
 
+```bash
+esl-reformat stockholm pdb_kunitz_rp.ali > pdb_kunitz_rp.sto
+```
+## This code 
+convert .ali ➡ .sto using esl-reformat because:
+
+.sto is the required input format for hmmbuild
+
+.sto is a richer, more standard format for MSAs in HMMER workflows
+
+esl-reformat is the easy and official way to do this conversion
+
 Build Structural HMM
 ```bash
 bash create_hmm_str.sh
