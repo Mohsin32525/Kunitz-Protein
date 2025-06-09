@@ -1,6 +1,6 @@
 # Project Overview
 This project is about building a pipeline (a step-by-step method) to detect the Kunitz-type protease inhibitor domain (Pfam ID: PF00014) in proteins using Profile Hidden Markov Models (HMMs).
-Developed by Andrea Lenti, and combines two main approaches:
+Developed by Mohsin Nazir Bhat, and combines two main approaches:
 Structural bioinformatics – using 3D structure information of proteins.
 Sequence modeling – using the protein sequences directly.
 The main goal is to:
@@ -50,5 +50,16 @@ Data collection resolution
 This will output a .CSV file. Then execute the following bash script:
 ```bash
 bash script_recover_representative_kunitz.sh
+## This script:
+
+Extracts PF00014 sequences from PDB
+
+Clusters sequences at 90% identity using CD-HIT
+
+Extracts representative sequences
+
+Generates tmp_pdb_efold_ids.txt in PDB:CHAIN format
+
+🔎 Before proceeding: Manually inspect tmp_pdb_efold_ids.txt and remove sequences that are too long.
 
 
