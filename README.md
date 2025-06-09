@@ -63,3 +63,71 @@ Generates tmp_pdb_efold_ids.txt in PDB:CHAIN format
 
 Before proceeding: Manually inspect tmp_pdb_efold_ids.txt and remove sequences that are too long.
 
+
+1. Download Swiss-Prot Dataset
+Go to UniProt and download the full Swiss-Prot FASTA file:
+uniprot_sprot.fasta
+
+
+ Download All Kunitz Proteins
+From UniProt, search and download all Kunitz domain proteins:
+all_kunitz.fasta
+
+3. Structural Alignment
+Use PDBeFold with tmp_pdb_efold_ids.txt
+Output: pdb_kunitz_rp.ali
+
+4. Build Structural HMM
+bash
+Copy
+Edit
+bash create_hmm_str.sh
+bash create_testing_sets.sh
+Builds structural HMM from PDBeFold alignment
+
+Removes training sequences from test set
+
+Generates balanced positive and negative test sets
+
+Finds best E-value thresholds using MCC (2-fold CV)
+
+Outputs detailed performance to hmm_results_strali.txt
+
+5. Evaluate Performance
+   Run:
+
+```bash
+python performance.py
+```
+Metrics computed:
+
+MCC (Matthews Correlation Coefficient)
+
+Q2 (Accuracy)
+
+TPR (True Positive Rate)
+
+PPV (Precision)
+
+Plot Confusion Matrix
+```bash
+python confusion_matrix.py
+```
+
+## Output Files Summary
+hmm_results_strali.txt and hmm_results_seqali.txt contain:
+The best E-value thresholds selected by maximizing the Matthews Correlation Coefficient (MCC) -Performance metrics for each test set and overall, calculated using the E-value that yielded the highest MCC, based on either full sequence or best single domain evaluations -Lists of false positives and false negatives
+neg_1.fasta and neg_2.fasta: FASTA files of non-Kunitz sequences used respectively as the negative set 1 and set 2.
+pos_1.fasta and pos_2.fasta: FASTA files of Kunitz (positive) sequences used in set 1 and set 2.
+pdb_kunitz_rp_clean.fasta: Cleaned representative Kunitz sequences used for both structural and sequence alignments (after filtering for length).
+pdb_kunitz_rp_seqali.fasta and pdb_kunitz_rp_seqali.hmm: The multiple sequence alignment and resulting HMM model produced using MUSCLE.
+pdb_kunitz_rp_strali.fasta and pdb_kunitz_rp_strali.hmm: The multiple structure alignment and resulting HMM model built from PDBeFold.
+set_1_strali.class and set_2_strali.class: Classification results from hmmsearch for set 1 and set 2 (structure-based model).
+temp_overall.class: Classification results for the combined dataset (positive + negative), used to estimate overall performance for each threshold.
+ Author
+
+## Mohsin Nazir Bhat 
+ MSc Bioinformatics – University of Bologna
+Laboratory of Bioinformatics 1 (LB1)
+
+You're welcome to suggest improvements or fork this project to extend its functionality!
