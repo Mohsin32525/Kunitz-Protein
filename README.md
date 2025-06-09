@@ -27,7 +27,7 @@ conda install -c conda-forge biopython
  3. BLAST+	Identify and filter sequence similarity to prevent overlap
 4.  Biopython	FASTA manipulation via get_seq.py
 ## Pipeline Steps
-0. Extract Representative Kunitz Sequences from PDB
+Extract Representative Kunitz Sequences from PDB
 
 Use advanced search: Data Collection Resolution <= 3.5 AND ( Identifier = "PF00014" AND Annotation Type = "Pfam" ) AND Polymer Entity Sequence Length <= 80 AND Polymer 
 
