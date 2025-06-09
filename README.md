@@ -3,6 +3,7 @@ This project is about building a pipeline (a step-by-step method) to detect the 
 Developed by Mohsin Nazir Bhat, and combines two main approaches:
 Structural bioinformatics – using 3D structure information of proteins.
 Sequence modeling – using the protein sequences directly.
+
 The main goal is to:
 Create an HMM based on 3D structure alignments (structure-guided HMM),
 Compare it with a regular sequence-based HMM (made from a multiple sequence alignment),
