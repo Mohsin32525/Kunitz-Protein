@@ -22,7 +22,21 @@ conda install -c bioconda cd-hit hmmer blast muscle
 conda install -c conda-forge biopython
 
 ## Tool	 Use
- CD-HIT	Remove redundancy in training sequences
- HMMER 	Build and use HMMs (hmmbuild, hmmsearch)
- BLAST+	Identify and filter sequence similarity to prevent overlap
- Biopython	FASTA manipulation via get_seq.py
+ 1. CD-HIT	Remove redundancy in training sequences
+ 2. HMMER 	Build and use HMMs (hmmbuild, hmmsearch)
+ 3. BLAST+	Identify and filter sequence similarity to prevent overlap
+4.  Biopython	FASTA manipulation via get_seq.py
+## Pipeline Steps
+0. Extract Representative Kunitz Sequences from PDB
+Use advanced search: Data Collection Resolution <= 3.5 AND ( Identifier = "PF00014" AND Annotation Type = "Pfam" ) AND Polymer Entity Sequence Length <= 80 AND Polymer Entity Sequence Length >= 45
+Press the custom report with the following flags:
+Entry ID
+PDB ID
+Entity ID
+Auth Asym ID
+Sequence
+Annotation Identifier
+Data collection resolution
+This will output a .CSV file. Then execute the following bash script:
+(bash script_recover_representative_kunitz.sh)
+
