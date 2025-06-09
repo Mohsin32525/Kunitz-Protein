@@ -19,8 +19,10 @@ By training an HMM using multiple aligned examples of the Kunitz domain (based o
 ## Required Tools
 Install these via conda:
 
+```
 conda install -c bioconda cd-hit hmmer blast muscle
 conda install -c conda-forge biopython
+```
 
 ## Tool	 Use
  1. CD-HIT	Remove redundancy in training sequences
