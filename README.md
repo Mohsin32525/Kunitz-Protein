@@ -133,7 +133,8 @@ pdb_kunitz_rp_seqali.fasta and pdb_kunitz_rp_seqali.hmm: The multiple sequence a
 pdb_kunitz_rp_strali.fasta and pdb_kunitz_rp_strali.hmm: The multiple structure alignment and resulting HMM model built from PDBeFold.
 set_1_strali.class and set_2_strali.class: Classification results from hmmsearch for set 1 and set 2 (structure-based model).
 temp_overall.class: Classification results for the combined dataset (positive + negative), used to estimate overall performance for each threshold.
- Author
+ 
+ ## Author
 
 ## Mohsin Nazir Bhat 
  MSc Bioinformatics – University of Bologna
