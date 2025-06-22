@@ -127,6 +127,20 @@ python confusion_matrix.py
 ```
 
 ## Output Files Summary
+I started by collecting high-quality structural Kunitz domain proteins from the PDB, filtering by resolution, domain ID (PF00014), and sequence length. Then, I used a bash script to clean, cluster, and extract representative sequences.
+
+Next, I aligned these representatives structurally using PDBeFold, and built a structure-guided HMM using hmmbuild. This model captures the conserved 3D fold of Kunitz domains.
+
+To evaluate the model, I downloaded all reviewed proteins from Swiss-Prot, and extracted both positive examples (Kunitz proteins) and negative examples (non-Kunitz). I removed any sequences that were too similar to my training data.
+
+Then I created two sets:
+
+    SET_1 = pos_1 + neg_1
+
+    SET_2 = pos_2 + neg_2
+
+I used hmmsearch to test the model on both sets using different E-value thresholds (like 1e-6). Finally, I ran a Python script to calculate metrics like Accuracy, MCC, TPR, and Precision.
+
 hmm_results_strali.txt and hmm_results_seqali.txt contain:
 The best E-value thresholds selected by maximizing the Matthews Correlation Coefficient (MCC) -Performance metrics for each test set and overall, calculated using the E-value that yielded the highest MCC, based on either full sequence or best single domain evaluations -Lists of false positives and false negatives
 neg_1.fasta and neg_2.fasta: FASTA files of non-Kunitz sequences used respectively as the negative set 1 and set 2.
